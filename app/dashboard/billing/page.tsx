@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const page = () => {
+function Page() {
     const router = useRouter() // Move useRouter here
 
     const handlePayment = async () => {
@@ -119,4 +119,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

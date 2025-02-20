@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { useSession, signIn, signOut } from 'next-auth/react'; 
 import Hero from '@/components/Hero';
 import Orders from '@/components/Orders';
 import Analytics from '@/components/Analytics';

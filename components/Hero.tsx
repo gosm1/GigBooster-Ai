@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import DotPattern from './ui/dot-pattern'
-import AnimatedShinyText from './ui/animated-shiny-text';
 import AnimatedGradientText from './ui/animated-gradient-text';
 
 const Hero = () => {

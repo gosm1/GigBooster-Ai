@@ -94,7 +94,7 @@ const Orders = ({ className }: { className?: string}) => {
   return (
     <section id="benefits">
       <div className="bg-black flex flex-col sm:flex-row  items-center justify-evenly md:pt-16">
-        <h1 className=" text-2xl text-center px-4 md:px-0 md:text-start pb-10 md:pb-0 md:text-4xl max-w-lg font-normal ">This How's <span className="font-semibold bg-gradient-to-r from-[#F1EFFE] via-[#B3A7FE] via-[#804eec] to-[#4325FF] bg-clip-text text-transparent">you're orders</span> will be after using GigBooster AI</h1>
+        <h1 className=" text-2xl text-center px-4 md:px-0 md:text-start pb-10 md:pb-0 md:text-4xl max-w-lg font-normal ">This How&apos;s <span className="font-semibold bg-gradient-to-r from-[#F1EFFE] via-[#B3A7FE] via-[#804eec] to-[#4325FF] bg-clip-text text-transparent">you&apos;re orders</span> will be after using GigBooster AI</h1>
           <div
             className={cn(
               "relative flex h-[400px] md:w-[500px] flex-col p-6 overflow-hidden rounded-lg border border-cyan-50/30 md:shadow-xl",

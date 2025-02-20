@@ -1,4 +1,3 @@
-import { SidebarDemo } from '@/components/Sidebar'
 import Sideee from '@/components/Sideee'
 import { gigboosterservices } from '@/data/data'
 import { IconBrandFiverr } from '@tabler/icons-react'

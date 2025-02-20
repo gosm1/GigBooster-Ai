@@ -3,14 +3,13 @@ import Marquee from '@/components/ui/marquee';
 import { gigboosterservices } from '@/data/data';
 import { IconBrandFiverr } from '@tabler/icons-react';
 import { useSession, signIn } from 'next-auth/react'; 
-import { useRouter } from 'next/router'; 
 
 import React, { useEffect } from 'react'; 
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 
 import gigboosterICON from '@/assets/gigboosterICON.png'
-const page = () => {
+const Page = () => {
     const { data: session } = useSession();
 
 
@@ -20,7 +19,7 @@ const page = () => {
         }
     }, [session]); 
 
-    const handleSignIn = async (provider:any) => {
+    const handleSignIn = async (provider: string) => {
         await signIn(provider, 
                                         { 
                                         redirect: true, 
@@ -81,12 +80,8 @@ const page = () => {
             <div className="relative flex h-[50vh] md:h-full md:w-[430px] flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-background px-4 md:px-16 md:shadow-xl">
                 <div className="flex flex-row gap-2 md:gap-4 [perspective:210px]">
                     <Marquee
-                        className="h-screen justify-center overflow-hidden [--duration:60s] [--gap:0.8rem]"
+                        className="h-screen justify-center overflow-hidden [--duration:60s] [--gap:0.8rem] translate-x-0 translate-y-0 -translate-z-70 rotate-x-0 rotate-y-[-14deg] rotate-z-[10deg] scale-[1.4]"
                         vertical
-                        style={{
-                            transform:
-                                "translateX(0px) translateY(0px) translateZ(-70px) rotateX(0deg) rotateY(-14deg) rotateZ(10deg) scale(1.4)",
-                        }}
                     >
                         {gigboosterservices.map((service, index) => (
                             <div key={index} className="bg-slategrey border border-neutral-700 h-[200px] md:h-[230px] hover:bg-hovergrey flex flex-col justify-center items-center rounded-lg p-2">
@@ -103,4 +98,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

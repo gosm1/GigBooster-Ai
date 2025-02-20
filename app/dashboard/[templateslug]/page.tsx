@@ -12,7 +12,7 @@ import axios from 'axios'
 const Page = ({params} : {params : { templateslug: string}}) => {
     const selectedTemplate = gigboosterservices.find((template) => template.slug === params.templateslug)
     
-    const [aiOutput, setAiOutput] = useState<any>('')
+    const [aiOutput, setAiOutput] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
 
     const onSubmit = async (formdata: FormData) => {
@@ -32,7 +32,7 @@ const Page = ({params} : {params : { templateslug: string}}) => {
             const results = await chatSession.sendMessage(AiPrompt);
             const formattedOutput = results.response.text().replace(/\n/g, "<br>");
     
-            const response = await axios.post('/api/', {
+            await axios.post('/api/', {
                 title: dataSet.servicename,
                 outputcontent: formattedOutput,
                 templateUsed: selectedTemplate?.name, 

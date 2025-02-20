@@ -5,12 +5,12 @@ import Stripe from 'stripe'
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     apiVersion: '2024-09-30.acacia',
 })
-export async function POST(req: Request){
-    try{
+export async function POST(/* req: Request */) {
+    try {
         const session = await auth()
         const userId = session?.user?.id
 
-        if(!userId){
+        if (!userId) {
             return new NextResponse('Unauthorized', { status: 401 })
         }
 
@@ -35,10 +35,9 @@ export async function POST(req: Request){
             cancel_url: `https://gigboosterai.vercel.app/`,
         })
 
-        return NextResponse.json({ url: checkoutSession.url }) 
+        return NextResponse.json({ url: checkoutSession.url })
 
-    }
-    catch(err){
+    } catch (err) {
         return new NextResponse('An error occurred' + err, { status: 500 })
     }
 }
