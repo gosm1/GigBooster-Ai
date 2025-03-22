@@ -14,19 +14,18 @@ import { auth } from '@/app/lib/auth'
 import { redirect } from 'next/navigation'
 
 const Page = async () => {
-    const session = await auth()
-    const userId = session?.user?.id
+    const session = await auth();
+    const userId = session?.user?.id;
 
     if (!userId) {
-        redirect('/')
+        redirect('/login'); // redirect to login page if not authenticated
     }
-
 
     const userHistory = await prisma.aiOutputHistory.findMany({
         where: {
-            userId: userId, 
+            userId: userId,
         },
-    })
+    });
 
     return (
         <main className="bg-bgdark h-screen">
@@ -40,6 +39,7 @@ const Page = async () => {
                             <TableHead>Title</TableHead>
                             <TableHead>Data</TableHead>
                             <TableHead>Created At</TableHead>
+                            <TableHead>Action</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -65,7 +65,7 @@ const Page = async () => {
                             ))
                         ) : (
                             <TableRow>
-                                <TableCell colSpan={4} className='text-center py-4'>No output history found.</TableCell>
+                                <TableCell colSpan={5} className='text-center py-4'>No output history found.</TableCell>
                             </TableRow>
                         )}
                     </TableBody>
@@ -75,4 +75,4 @@ const Page = async () => {
     )
 }
 
-export default Page
+export default Page;

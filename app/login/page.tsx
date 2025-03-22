@@ -21,10 +21,10 @@ const Page = () => {
 
     const handleSignIn = async (provider: string) => {
         await signIn(provider, 
-                                        { 
-                                        redirect: true, 
-                                        callbackUrl: '/dashboard' 
-                                    });
+                    { 
+                    redirect: true, 
+                    callbackUrl: '/dashboard' 
+                });
     };
 
 

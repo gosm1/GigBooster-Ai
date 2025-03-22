@@ -40,7 +40,7 @@ let notifications = [
   {
     name: "Order received",
     description: "Fiverr",
-    time: "82h ago",
+    time: "2h ago",
     icon: "💸",
     color: "#1DBF73",
   },
