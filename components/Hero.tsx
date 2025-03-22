@@ -13,20 +13,9 @@ const Hero = () => {
         WebkitTextFillColor: "transparent",
     };
     return (
-        <main className='bg-black h-screen flex items-center justify-center'> {/* Added flex and centering classes */}
+        <main className='bg-black h-screen flex items-center justify-center'>
             <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background pt-24">
                 <div className="z-10 whitespace-pre-wrap text-center text-5xl font-medium text-white">
-                    {/* <div className="z-10 flex pb-8 items-center justify-center">
-                        <div
-                            className={cn(
-                                "group rounded-full border  text-base text-white transition-all ease-in hover:cursor-pointer  border-white/5 bg-neutral-900 hover:bg-neutral-800",
-                            )}
-                        >
-                        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out  hover:duration-300 hover:text-neutral-400">
-                            <span>✨ Discover Our AI Solution for Fiverr Sellers</span>
-                        </AnimatedShinyText>
-                        </div>
-                    </div> */}
                     <div className="z-10 flex mb-8 items-center justify-center">
                         <AnimatedGradientText>
                         ✨<hr className="mx-3 h-5 w-px shrink-0 bg-gray-300" />{" "}
@@ -34,7 +23,7 @@ const Hero = () => {
                                 className={cn(
                                     `inline animate-gradient bg-gradient-to-r from-[#F1EFFE] via-[#9c40ff] to-[#F1EFFE] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                                 )}
-                        >
+                            >
                             Discover Our AI Solution for Fiverr Sellers
                         </span>
                         </AnimatedGradientText>
@@ -57,12 +46,41 @@ const Hero = () => {
 
                     <div className="flex items-center justify-center mt-8 gap-4">
                         <div className="flex items-center gap-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-history w-4 h-4 text-muted-foreground"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                strokeWidth="2"  // Fixed
+                                strokeLinecap="round"  // Fixed
+                                strokeLinejoin="round"  // Fixed
+                                className="lucide lucide-history w-4 h-4 text-muted-foreground"
+                            >
+                                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                                <path d="M3 3v5h5"></path>
+                                <path d="M12 7v5l4 2"></path>
+                            </svg>
                             <span className="text-sm text-muted-foreground">free trial available</span>
                             <span className="text-muted-foreground">•</span>
                         </div>
                         <div className="flex items-center gap-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-credit-card w-4 h-4 text-muted-foreground"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                strokeWidth="2"  // Fixed
+                                strokeLinecap="round"  // Fixed
+                                strokeLinejoin="round"  // Fixed
+                                className="lucide lucide-credit-card w-4 h-4 text-muted-foreground"
+                            >
+                                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                <line x1="2" x2="22" y1="10" y2="10"></line>
+                            </svg>
                             <span className="text-sm text-muted-foreground">No card required</span>
                         </div>
                     </div>
