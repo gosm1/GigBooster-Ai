@@ -17,7 +17,6 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    // 🔥 Important: Include user.id in session
     async session({ session, user }) {
       if (session.user) {
         session.user.id = user.id;
